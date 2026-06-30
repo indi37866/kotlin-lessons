@@ -1,3 +1,5 @@
+package classes06
+
 fun main () {
     val vault = listOf(SmartLamp(name = "RX660"), RobotVacuum(name = "mx880"))
     for (i in vault) {
@@ -5,3 +7,4 @@ fun main () {
         i.performAction()
     }
 }
+

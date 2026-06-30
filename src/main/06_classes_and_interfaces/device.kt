@@ -1,3 +1,5 @@
+package classes06
+
 abstract class Device {
     abstract val name: String
     val isOn: Boolean = false
