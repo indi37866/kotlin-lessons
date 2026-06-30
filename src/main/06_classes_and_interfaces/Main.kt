@@ -1,7 +1,7 @@
 fun main () {
-    val vault = listOf(SmartLamp(name = "RX660", isOn), RobotVacuum(name = "mx880", isOn))
+    val vault = listOf(SmartLamp(name = "RX660"), RobotVacuum(name = "mx880"))
     for (i in vault) {
-        if (internetDocument is i) {i.connectToNetwork()}
+        if (i is InternetDocument) {i.connectToNetwork()}
         i.performAction()
     }
 }

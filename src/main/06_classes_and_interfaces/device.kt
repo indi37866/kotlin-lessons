@@ -6,16 +6,14 @@ abstract class Device {
 
 
 
-class SmartLamp(override val name: String,
-                override val isOn: Boolean) : Device() {
+class SmartLamp(override val name: String) : Device() {
     override fun performAction() {
         println("Лампа $name светится")
     }
 
 }
 
-class RobotVacuum (override val name: String,
-                   override val isOn: Boolean): Device(), InternetDocument {
+class RobotVacuum (override val name: String): Device(), InternetDocument {
     override fun performAction() {
         println("")
         println("Пылесос $name убирает дом")
