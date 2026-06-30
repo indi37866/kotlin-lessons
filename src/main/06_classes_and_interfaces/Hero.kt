@@ -6,7 +6,7 @@ abstract class Hero {
     abstract fun attack (target: Hero)
 }
 
-class Warrior(override val name: String): Hero {
+class Warrior(override val name: String): Hero() {
     override fun attack(target: Hero) {
         health -= 10
     }
