@@ -8,13 +8,13 @@ abstract class Hero {
 
 class Warrior(override val name: String): Hero() {
     override fun attack(target: Hero) {
-        health -= 10
+        target.health -= 10
     }
 }
 
 class Paladin(override val name: String) : Hero(), Defender, Healer {
     override fun attack(target: Hero) {
-        health -= 10
+        target.health -= 10
     }
 
     override fun block() {
