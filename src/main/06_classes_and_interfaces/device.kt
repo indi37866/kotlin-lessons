@@ -1,8 +1,7 @@
 abstract class Device {
     abstract val name: String
-    abstract val isOn: Boolean = false
+    abstract val isOn: Boolean
     abstract fun performAction ()
-
     }
 }
 

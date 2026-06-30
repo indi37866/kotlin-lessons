@@ -1,3 +1,3 @@
-interface internetDocument {
+interface InternetDocument {
     fun connectToNetwork ()
 }
