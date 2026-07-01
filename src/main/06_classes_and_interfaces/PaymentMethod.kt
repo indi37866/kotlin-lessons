@@ -1,20 +1,25 @@
 package classes06
 
-abstract class PaymentMethod {
-    var balance: Int = 10_000
-    abstract fun pay (amount: Int)
+abstract class MediaFile {
+    abstract val title: String
+    abstract fun play()
 }
 
-class BankCard : PaymentMethod(), Cashbackable {
-    override fun pay(amount: Int) {
-        balance -= amount
-        println("Оплата картой на сумму $amount. Остаток $balance")
+class Podcast(override val title: String) : MediaFile(), Downloadable, Shareable {
+    override fun share() {
+        println("Делимся подкастом с получателем")
+    }
+
+    override fun play() {
+        println("Подкаст воспроизводится")
     }
 }
 
-class CryptoWallet : PaymentMethod() {
-    override fun pay(amount: Int) {
-        balance -= amount
-        println("Оплата криптой на сумму $amount. Остаток: $balance")
+class LiveStream(override val title: String) : MediaFile(), Shareable {
+    override fun share() {
+        println("Делимся эфиром с получателем")
+    }
+    override fun play {
+        println("Эфир воспроизводится")
     }
 }
