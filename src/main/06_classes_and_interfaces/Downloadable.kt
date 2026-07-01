@@ -1,7 +1,7 @@
 package classes06
 
 interface Downloadable {
-    fun dowbload() {
+    fun download() {
         println("Файл скачивается на устройство")
     }
 }

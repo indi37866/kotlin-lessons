@@ -19,7 +19,7 @@ class LiveStream(override val title: String) : MediaFile(), Shareable {
     override fun share() {
         println("Делимся эфиром с получателем")
     }
-    override fun play {
+    override fun play() {
         println("Эфир воспроизводится")
     }
 }
