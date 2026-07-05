@@ -3,7 +3,7 @@ class User (val login: String, val password: String) {
         if (password.length < 6) println("Внимание: у пользователя $login слишком " +
                 "слабый пароль")
     }
-    constructor(login: String) : this(login = login) {
+    constructor(login: String) : this(login, "qwerty") {
         println("Для пользователя $login создан автоматический пароль")
     }
 }
