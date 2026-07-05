@@ -1,4 +1,5 @@
 fun main() {
-    val firstUser = User("Indo", "123")
-    val secondUser = User("Krut")
+    val product = Product("Ноутбук", 50_000)
+    val limitedProduct = Product("Смартфон", 30_000, 15)
+
 }

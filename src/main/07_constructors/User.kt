@@ -1,9 +1,13 @@
-class User (val login: String, val password: String) {
+import java.security.interfaces.RSAMultiPrimePrivateCrtKey
+
+class  Product (val name: String, val price: Int) {
+    var discount: Int = 0
     init {
-        if (password.length < 6) println("Внимание: у пользователя $login слишком " +
-                "слабый пароль")
+        println("Товар $name успешно добавлен на склад. Базовая цена: $price")
     }
-    constructor(login: String) : this(login, "qwerty") {
-        println("Для пользователя $login создан автоматический пароль")
+    constructor(name: String, price: Int, discountPercent: Int = 20) : this(name, price) {
+        price -= price * discountPercent / 100
+        this.discount = discountPercent
+        println("Применена скидка ${discountPercent}%. Новая цена товара: $price")
     }
 }
