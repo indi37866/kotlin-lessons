@@ -1,2 +1,2 @@
-class Order (val orderId: String, promoCode: String? = null) {
+class Order (val orderId: Int, val promoCode: String? = null) {
 }
