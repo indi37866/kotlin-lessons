@@ -1,6 +1,5 @@
 fun main () {
-    val name = "Alex"
-    val biography: String? = null
-    val finalBiography = biography ?: "Информация не укзаана"
-    println("Пользователь: $name . О себе: ${finalBiography}")
+    val temp: List<Int?> = listOf(22, null, 24, null, 25)
+    val finalTemp = listOf(temp.filter{it != null})
+    println(finalTemp)
 }
