@@ -1,5 +1,6 @@
 fun main () {
-    val temp: List<Int?> = listOf(22, null, 24, null, 25)
-    val finalTemp = temp.filter{it != null}
-    println(finalTemp)
+    val firstOrder = Order("SALE20")
+    val secondOrder = Order("")
+    println(firstOrder.orderId?.length)
+    println(secondOrder.orderId?.length)
 }
