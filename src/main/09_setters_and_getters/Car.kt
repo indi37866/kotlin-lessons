@@ -5,5 +5,6 @@ class Car {
         set(value: Int) {
             if (value < 0) field = 0
             if (value > 250) field = 250
+            else field = value
         }
 }
