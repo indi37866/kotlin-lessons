@@ -1,9 +1,8 @@
 package setandget_09
 
 class Hero () {
-    var isUltimateReady = false
-        set(value: Boolean) {if (mana > 80) true}
+    val isUltimateReady: Boolean
+        get() = mana > 80
     var mana: Int = 100
         set(value: Int) {field = value.coerceIn(0, 150)}
-
 }
