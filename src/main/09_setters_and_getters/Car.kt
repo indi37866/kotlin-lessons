@@ -1,10 +1,9 @@
 package setandget_09
 
-class Car {
-    var speed: Int = 0
-        set(value: Int) {
-            if (value < 0) field = 0
-            if (value > 250) field = 250
-            else field = value
-        }
+class Hero () {
+    var isUltimateReady = false
+        set(value: Boolean) {if (mana > 80) true}
+    var mana: Int = 100
+        set(value: Int) {field = value.coerceIn(0, 150)}
+
 }
