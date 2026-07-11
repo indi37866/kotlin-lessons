@@ -2,7 +2,7 @@ fun main() {
     val enemyPotion = Potion("малое зелье здоровья", 10)
     val firstPlayerPotion = Potion("большое зелье здоровья", 35)
     val firstPlayerWeapon = Weapon("Меч", 15)
-    val arrayOfItems = arrayOf<Item>(
+    arrayOf<Item>(
         firstPlayerWeapon,
         firstPlayerPotion,
         enemyPotion
