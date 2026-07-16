@@ -1,5 +1,6 @@
 package enum11
+
 fun main() {
-    val myOrder = Order(OrderStatus.CANCELLED)
-    myOrder.process()
+    val myConfig = Config(Environment.PROD)
+    println("URL: ${myConfig.url}, Timeout: ${myConfig.timeout}")
 }

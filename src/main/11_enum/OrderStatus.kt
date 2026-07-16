@@ -1,22 +1,22 @@
 package enum11
 
-enum class OrderStatus {
-    PENDING, PROCESSING, SHIPPED, DELIVERED, CANCELLED
+enum class Environment {
+    DEV,
+    TEST,
+    PROD
 }
 
-class Order(var status: OrderStatus) {
-    fun process() {
-        val message = when (status) {
-            OrderStatus.PENDING -> "Заказ в ожидании"
-            OrderStatus.PROCESSING -> "Заказ готовится"
-            OrderStatus.SHIPPED -> "Заказ в пути"
-            OrderStatus.DELIVERED -> "Заказ доставлен"
-            OrderStatus.CANCELLED -> fail("Заказ отменен")
-        }
-        println(message)
+class Config(val env: Environment) {
+    val url: String = when (env) {
+        Environment.DEV -> "http://localhost:8080"
+        Environment.TEST -> "http://test-server.com"
+        Environment.PROD -> "http://api.production.com"
+    }
+
+    val timeout: Int = when (env) {
+        Environment.DEV -> 5
+        Environment.TEST -> 10
+        Environment.PROD -> 30
     }
 }
 
-fun fail(message: String) {
-    throw IllegalArgumentException(message)
-}
