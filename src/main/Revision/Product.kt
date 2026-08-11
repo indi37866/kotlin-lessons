@@ -1,7 +1,7 @@
 package revision
 
-sealed class NetworkResult {
-    data class Success(val code: Int, val data: String): NetworkResult()
-    data class Error(val message: String): NetworkResult()
-    data object Loading: NetworkResult()
+data class UserProfile(val name: String, val balance: Double) {
+    companion object {
+        const val DEFAULT_CURRENCY = "$"
+    }
 }
