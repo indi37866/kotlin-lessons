@@ -1,10 +1,9 @@
 package revision
 
 fun main() {
-    val firstProfile = UserProfile("Иван", 12.10)
-    println(firstProfile.getFormattedBalance())
+    val str: String = getFirst(listOf("hello", "world"))
+    val num: Int = getFirst(listOf(1, 2, 3))
+    println(str)
+    println(num)
 }
 
-fun UserProfile.getFormattedBalance(): String {
-    return "Ьаланс пользователя $name: $balance ${UserProfile.DEFAULT_CURRENCY}"
-}

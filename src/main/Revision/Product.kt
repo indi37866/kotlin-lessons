@@ -1,7 +1,6 @@
 package revision
 
-data class UserProfile(val name: String, val balance: Double) {
-    companion object {
-        const val DEFAULT_CURRENCY = "$"
-    }
+
+fun <E> getFirst(first: List<E>): E {
+    return first[0]
 }
